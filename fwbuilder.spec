@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 2.1.11
+%define version 2.1.13
 %define release %mkrel 1
 
 Name: %{name}
@@ -55,5 +55,3 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %doc doc
-
-
