@@ -47,6 +47,7 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%doc %{_datadir}/doc/%{name}
 %{_bindir}/*
 %{_mandir}/man1/*
 %dir %{_datadir}/%{name}
