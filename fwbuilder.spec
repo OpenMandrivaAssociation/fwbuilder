@@ -23,15 +23,12 @@ Firewall administration tool.
 %setup -q
 
 %build
-#export QTDIR=%_prefix/%_lib/qt3
-#export PATH=${PATH}:${QTDIR}/bin/
-#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${QTDIR}/lib
 
 %{__libtoolize} --force --copy
 %{__aclocal}
 %{__autoconf}
-%configure --enable-auto-docdir \
-		--with-templatedir=%{_datadir}/%{name}
+%configure2_5x --enable-auto-docdir \
+		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_datadir}/doc/%{name}
 %make
 
 %install
@@ -54,4 +51,3 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 %{_mandir}/man1/*
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
-%doc doc
