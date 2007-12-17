@@ -10,7 +10,6 @@ Release: %{release}
 License: GPL
 Group: System/Configuration/Networking
 Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
