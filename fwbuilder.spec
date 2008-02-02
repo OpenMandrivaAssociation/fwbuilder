@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 2.1.13
+%define version 2.1.16
 %define release %mkrel 1
 
 Name: %{name}
@@ -7,9 +7,9 @@ Summary: Firewall Builder
 Url: http://www.fwbuilder.org/
 Version: %{version}
 Release: %{release}
-License: GPL
+License: GPLv2+
 Group: System/Configuration/Networking
-Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.bz2
+Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
