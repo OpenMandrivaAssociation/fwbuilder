@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 2.1.18
+%define version 2.1.19
 %define release %mkrel 1
 
 Name: %{name}
@@ -10,6 +10,7 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
+Patch0: fwbuilder-2.1.14-gcc43.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
@@ -21,6 +22,7 @@ Firewall administration tool.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 
