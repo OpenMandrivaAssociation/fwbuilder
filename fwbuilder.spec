@@ -1,6 +1,7 @@
 %define name fwbuilder
-%define version 2.1.19
-%define release %mkrel 1
+%define version 3.0.0
+%define svn 393
+%define release %mkrel -c %svn 1
 
 Name: %{name}
 Summary: Firewall Builder
@@ -15,7 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
-BuildRequires:	qt3-devel
+BuildRequires:	qt4-devel
 
 %description
 Firewall administration tool.
@@ -29,7 +30,7 @@ Firewall administration tool.
 %{__libtoolize} --force --copy
 %{__aclocal}
 %{__autoconf}
-%configure2_5x --enable-auto-docdir \
+%configure2_5x \
 		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_datadir}/doc/%{name}
 %make
 
