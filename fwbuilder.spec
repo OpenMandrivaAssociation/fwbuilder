@@ -11,7 +11,7 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
-Patch0: fwbuilder-2.1.14-gcc43.patch
+Patch0: fwbuilder-3.0.0-gcc43.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
