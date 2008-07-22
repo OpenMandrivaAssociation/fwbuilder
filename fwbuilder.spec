@@ -37,7 +37,7 @@ Firewall administration tool.
 %install
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
-make DDIR="${RPM_BUILD_ROOT}/" install
+make INSTALLROOT="${RPM_BUILD_ROOT}/" install
 
 # delete uneeded hidden files
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.obj
