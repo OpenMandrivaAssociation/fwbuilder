@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 404
+%define svn 406
 %define release %mkrel -c %svn 1
 
 Name: %{name}
@@ -10,7 +10,7 @@ Version: %{version}
 Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
-Source: http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
+Source: http://www.fwbuilder.org/nightly_builds/fwbuilder-3.0/build-%{svn}/%{name}-%{version}.tar.gz
 Patch0: fwbuilder-3.0.0-gcc43.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
