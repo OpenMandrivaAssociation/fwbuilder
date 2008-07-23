@@ -39,6 +39,19 @@ Firewall administration tool.
 
 make INSTALL_ROOT="${RPM_BUILD_ROOT}/" install
 
+mkdir -p %buidlroot%_datadir/applications
+cat > %buildroot%_datadir/applications/mandriva-%{name}.desktop <<EOF
+[Desktop Entry]
+Name=Firewall Builder
+Comment=Design IPTables Firewall Rules
+Icon=fwbuilder
+Categories=System;Settings;Security;Qt;
+Exec=fwbuilder
+Type=Application
+StartupNotify=true
+Terminal=false
+EOF
+
 # delete uneeded hidden files
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.obj
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
@@ -53,5 +66,5 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 %doc %{_datadir}/doc/%{name}
 %{_bindir}/*
 %{_mandir}/man1/*
-%dir %{_datadir}/%{name}
-%{_datadir}/%{name}/*
+%{_datadir}/%{name}
+%{_datadir}/applications/*.desktop
