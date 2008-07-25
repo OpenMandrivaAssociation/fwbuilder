@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 406
+%define svn 413
 %define release %mkrel -c %svn 1
 
 Name: %{name}
@@ -11,7 +11,6 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://www.fwbuilder.org/nightly_builds/fwbuilder-3.0/build-%{svn}/%{name}-%{version}.tar.gz
-Patch0: fwbuilder-3.0.0-gcc43.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
@@ -23,7 +22,6 @@ Firewall administration tool.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 
