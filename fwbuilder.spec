@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 413
+%define svn 414
 %define release %mkrel -c %svn 1
 
 Name: %{name}
@@ -16,6 +16,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
 BuildRequires:	qt4-devel
+Buildrequires:	ImageMagick
 
 %description
 Firewall administration tool.
@@ -54,6 +55,11 @@ EOF
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.obj
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 
+mkdir -p %buildroot{%_iconsdir,%_miconsdir,%_liconsdir}
+install -D src/gui/Icons/firewall_16.png %buildroot%_miconsdir/%name.png
+convert -resize 32x32 src/gui/Icons/firewall_64.png %buildroot%_iconsdir/%name.png
+convert -resize 48x48 src/gui/Icons/firewall_64.png %buildroot%_liconsdir/%name.png
+
 %find_lang %{name}
 
 %clean
@@ -66,3 +72,6 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 %{_mandir}/man1/*
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_iconsdir}/%name.png
+%{_miconsdir}/%name.png
+%{_liconsdir}/%name.png
