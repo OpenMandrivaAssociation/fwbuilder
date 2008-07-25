@@ -37,7 +37,7 @@ Firewall administration tool.
 
 make INSTALL_ROOT="${RPM_BUILD_ROOT}/" install
 
-mkdir -p %buidlroot%_datadir/applications
+mkdir -p %buildroot%_datadir/applications
 cat > %buildroot%_datadir/applications/mandriva-%{name}.desktop <<EOF
 [Desktop Entry]
 Name=Firewall Builder
