@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 mkdir -p %buildroot{%_iconsdir,%_miconsdir,%_liconsdir}
 install -D src/gui/Icons/fwbuilder_16x16.png %buildroot%_miconsdir/%name.png
 install -D src/gui/Icons/fwbuilder_32x32.png %buildroot%_iconsdir/%name.png
-install -D src/gui/Icons/fwbuilder_64x64.png %buildroot%_liconsdir/%name.png
+install -D src/gui/Icons/fwbuilder_48x48.png %buildroot%_liconsdir/%name.png
 
 %find_lang %{name}
 
