@@ -44,7 +44,7 @@ mkdir -p %buildroot%_datadir/applications
 cat > %buildroot%_datadir/applications/mandriva-%{name}.desktop <<EOF
 [Desktop Entry]
 Name=Firewall Builder
-Comment=Design IPTables Firewall Rules
+Comment=Design and manage firewall configuration
 Icon=fwbuilder
 Categories=System;Settings;Security;Qt;
 Exec=fwbuilder
