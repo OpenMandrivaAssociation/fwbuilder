@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 442
+%define svn 445
 %define release %mkrel -c %svn 1
 
 Name: %{name}
@@ -11,20 +11,17 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://www.fwbuilder.org/nightly_builds/fwbuilder-3.0/build-%{svn}/%{name}-%{version}.tar.gz
-Patch0: fwbuilder-3.0.0-gcc4.3.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
 BuildRequires:	qt4-devel
-Buildrequires:	ImageMagick
 
 %description
 Firewall administration tool.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 
@@ -58,9 +55,9 @@ rm -rf $RPM_BUILD_DIR/%name-%version/doc/.obj
 rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
 
 mkdir -p %buildroot{%_iconsdir,%_miconsdir,%_liconsdir}
-install -D src/gui/Icons/firewall_16.png %buildroot%_miconsdir/%name.png
-convert -resize 32x32 src/gui/Icons/firewall_64.png %buildroot%_iconsdir/%name.png
-convert -resize 48x48 src/gui/Icons/firewall_64.png %buildroot%_liconsdir/%name.png
+install -D src/gui/Icons/fwbuilder_16x16.png %buildroot%_miconsdir/%name.png
+install -D src/gui/Icons/fwbuilder_32x32.png %buildroot%_iconsdir/%name.png
+install -D src/gui/Icons/fwbuilder_64x64.png %buildroot%_liconsdir/%name.png
 
 %find_lang %{name}
 
