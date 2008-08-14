@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 465
+%define svn 468
 %define release %mkrel -c %svn 1
 
 Name: %{name}
