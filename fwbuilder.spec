@@ -1,7 +1,6 @@
 %define name fwbuilder
 %define version 3.0.0
-%define svn 511
-%define release %mkrel -c %svn 1
+%define release %mkrel 1
 
 Name: %{name}
 Summary: Firewall Builder
@@ -10,7 +9,7 @@ Version: %{version}
 Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
-Source: http://www.fwbuilder.org/nightly_builds/fwbuilder-3.0/build-%{svn}/%{name}-%{version}.tar.gz
+Source: http://downloads.sourceforge.net/fwbuilder/%name-%version.tar.gz
 Patch0: fwbuilder-3.0.0-recognize-mandriva.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
