@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 3.0.0
+%define version 3.0.1
 %define release %mkrel 1
 
 Name: %{name}
@@ -16,6 +16,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
 BuildRequires:	qt4-devel
+BuildRequires:	ccache
 
 %description
 Firewall administration tool.
