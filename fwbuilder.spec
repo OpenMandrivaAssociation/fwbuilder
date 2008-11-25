@@ -26,10 +26,7 @@ Firewall administration tool.
 %patch0 -p0
 
 %build
-
-%{__libtoolize} --force --copy
-%{__aclocal}
-%{__autoconf}
+./autogen.sh
 %configure2_5x \
 		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_datadir}/doc/%{name}
 %make
