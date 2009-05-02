@@ -27,6 +27,7 @@ Firewall administration tool.
 
 %build
 ./autogen.sh
+%define Werror_cflags %nil
 %configure2_5x \
 		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_datadir}/doc/%{name}
 %make
