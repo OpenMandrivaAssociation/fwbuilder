@@ -1,6 +1,6 @@
 %define name fwbuilder
 %define version 3.0.7
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: %{name}
 Summary: Firewall Builder
