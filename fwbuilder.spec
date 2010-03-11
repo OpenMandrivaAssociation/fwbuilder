@@ -1,6 +1,6 @@
 %define name fwbuilder
-%define version 3.0.7
-%define release %mkrel 2
+%define version 4.0.0
+%define release %mkrel 1
 
 Name: %{name}
 Summary: Firewall Builder
@@ -10,13 +10,14 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://downloads.sourceforge.net/fwbuilder/%name-%version.tar.gz
-Patch0: fwbuilder-3.0.0-recognize-mandriva.patch
+Patch0: fwbuilder-4.0.0-recognize-mandriva.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	libfwbuilder-devel >= %{version}
 BuildRequires:	qt4-devel
 BuildRequires:	ccache
+BuildRequires:	cppunit-devel
 
 %description
 Firewall administration tool.
