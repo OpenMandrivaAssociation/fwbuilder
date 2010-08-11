@@ -10,7 +10,7 @@ Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
 Source: http://downloads.sourceforge.net/fwbuilder/%name-%version.tar.gz
-Patch0: fwbuilder-4.0.0-recognize-mandriva.patch
+Patch0: fwbuilder-4.1.0-recognize-mandriva.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
