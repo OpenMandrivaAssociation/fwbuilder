@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 4.1.3
+%define version 4.2.0.3530
 %define release %mkrel 1
 
 Name: %{name}
@@ -14,10 +14,12 @@ Patch0: fwbuilder-4.1.0-recognize-mandriva.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
-BuildRequires:	libfwbuilder-devel >= %{version}
 BuildRequires:	qt4-devel
 BuildRequires:	ccache
 BuildRequires:	cppunit-devel
+BuildRequires:	net-snmp-devel
+BuildRequires:	libxml2-devel
+BuildRequires:	libxslt-devel
 
 %description
 Firewall administration tool.
