@@ -41,8 +41,8 @@ Firewall administration tool.
 make INSTALL_ROOT="${RPM_BUILD_ROOT}/" install
 
 # delete uneeded hidden files
-rm -rf $RPM_BUILD_DIR/%name-%version/doc/.obj
-rm -rf $RPM_BUILD_DIR/%name-%version/doc/.moc
+rm -rf %{_builddir}/%name-%version/doc/.obj
+rm -rf %{_builddir}/%name-%version/doc/.moc
 
 %find_lang %{name}
 
