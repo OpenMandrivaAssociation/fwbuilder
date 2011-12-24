@@ -44,7 +44,7 @@ make INSTALL_ROOT="${RPM_BUILD_ROOT}/" install
 rm -rf %{_builddir}/%name-%version/doc/.obj
 rm -rf %{_builddir}/%name-%version/doc/.moc
 
-%find_lang %{name}
+#find_lang %{name}
 
 %clean
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
