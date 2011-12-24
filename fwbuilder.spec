@@ -1,5 +1,5 @@
 %define name fwbuilder
-%define version 5.0.0.3568
+%define version 5.0.1.3592
 %define release %mkrel 1
 
 Name: %{name}
