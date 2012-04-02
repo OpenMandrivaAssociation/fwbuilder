@@ -1,17 +1,20 @@
 %define name fwbuilder
-%define version 5.0.1.3592
+%define version 5.1.0.3599
+%if %{mdvver} < 201100
 %define release %mkrel 1
+%else
+%define release 1
+%endif
 
 Name: %{name}
-Summary: Firewall Builder
+Summary: Firewall administration tool
 Url: http://www.fwbuilder.org/
 Version: %{version}
 Release: %{release}
 License: GPLv2+
 Group: System/Configuration/Networking
-Source: http://downloads.sourceforge.net/fwbuilder/%name-%version.tar.gz
+Source0: http://downloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
 Patch0: fwbuilder-4.1.0-recognize-mandriva.patch
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-static-devel 
 BuildRequires:	qt4-devel
@@ -22,34 +25,29 @@ BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
 
 %description
-Firewall administration tool.
+Firewall Builder is a GUI firewall management application for iptables, PF,
+Cisco ASA/PIX/FWSM, Cisco router ACL and more. Firewall configuration data is
+stored in a central file that can scale to hundreds of firewalls managed
+from a single UI.
 
 %prep
 %setup -q
 %patch0 -p0
 
+# delete uneeded hidden files
+rm -rf doc/.obj
+rm -rf doc/.moc
+
 %build
 ./autogen.sh
-%define Werror_cflags %nil
 %configure2_5x \
-		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_datadir}/doc/%{name}
+		--with-templatedir=%{_datadir}/%{name} --with-docdir=%{_docdir}/%{name}
 %make
 
 %install
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
+make INSTALL_ROOT="%{buildroot}/" install
 
-make INSTALL_ROOT="${RPM_BUILD_ROOT}/" install
-
-# delete uneeded hidden files
-rm -rf %{_builddir}/%name-%version/doc/.obj
-rm -rf %{_builddir}/%name-%version/doc/.moc
-
-#find_lang %{name}
-
-%clean
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
-
-%files -f %{name}.lang
+%files
 %defattr(-,root,root)
 %doc %{_datadir}/doc/%{name}
 %{_bindir}/*
