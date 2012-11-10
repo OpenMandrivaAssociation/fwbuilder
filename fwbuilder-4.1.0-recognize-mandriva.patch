@@ -1,0 +1,35 @@
+--- configure.in.orig	2010-01-27 00:58:07.000000000 +0100
++++ configure.in	2010-03-11 05:21:18.000000000 +0100
+@@ -387,8 +387,8 @@
+     OS_LINUX=1
+     if test -f /etc/debian_version ; then
+ 	DISTRO=Debian
+-    elif test -f /etc/mandrake-release ; then
+-	DISTRO=Mandrake
++    elif test -f /etc/mandriva-release ; then
++	DISTRO=Mandriva
+     elif test -f /etc/slackware-version ; then
+ 	DISTRO=Slackware
+     elif test -f /etc/SuSE-release ; then
+--- src/res/os/linux24.xml.orig	2010-02-07 02:06:36.000000000 +0100
++++ src/res/os/linux24.xml	2010-03-11 05:22:43.000000000 +0100
+--- src/res/os/linux24.xml.orig	2010-07-24 01:38:38.000000000 +0200
++++ src/res/os/linux24.xml	2010-08-11 09:01:30.000000000 +0200
+@@ -138,7 +138,7 @@
+           <path_ifenslave>/sbin/ifenslave</path_ifenslave>
+           <path_ipset>/usr/sbin/ipset</path_ipset>
+         </RedHat>
+-        <Mandrake>
++        <Mandriva>
+           <path_lsmod>/sbin/lsmod</path_lsmod>
+           <path_modprobe>/sbin/modprobe</path_modprobe>
+           <path_iptables>/sbin/iptables</path_iptables>
+@@ -153,7 +153,7 @@
+           <path_brctl>/sbin/brctl</path_brctl>
+           <path_ifenslave>/sbin/ifenslave</path_ifenslave>
+           <path_ipset>/usr/sbin/ipset</path_ipset>
+-        </Mandrake>
++        </Mandriva>
+         <SuSE>
+           <path_lsmod>/sbin/lsmod</path_lsmod>
+           <path_modprobe>/sbin/modprobe</path_modprobe>
