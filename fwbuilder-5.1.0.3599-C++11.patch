@@ -1,0 +1,27 @@
+diff -urN fwbuilder-5.1.0.3599/src/libfwbuilder/src/fwbuilder/uint128.h fwbuilder-5.1.0.3599-patched/src/libfwbuilder/src/fwbuilder/uint128.h
+--- fwbuilder-5.1.0.3599/src/libfwbuilder/src/fwbuilder/uint128.h	2012-03-23 17:10:54.000000000 +1100
++++ fwbuilder-5.1.0.3599-patched/src/libfwbuilder/src/fwbuilder/uint128.h	2014-02-22 00:54:03.760653570 +1100
+@@ -466,9 +466,9 @@
+     {
+         char buf[33];
+         if (hi)
+-            sprintf(buf, "%"PRIX64"%08"PRIX64, (unsigned long long)hi,(unsigned long long)lo);
++            sprintf(buf, "%" PRIX64 "%08" PRIX64,(unsigned long long)hi,(unsigned long long)lo);
+         else
+-            sprintf(buf,"%"PRIX64,(unsigned long long)lo);
++            sprintf(buf,"%" PRIX64,(unsigned long long)lo);
+         return buf;
+     }
+ 
+diff -urN fwbuilder-5.1.0.3599/src/libgui/startup_tip_url.h fwbuilder-5.1.0.3599-patched/src/libgui/startup_tip_url.h
+--- fwbuilder-5.1.0.3599/src/libgui/startup_tip_url.h	2012-03-23 17:10:54.000000000 +1100
++++ fwbuilder-5.1.0.3599-patched/src/libgui/startup_tip_url.h	2014-02-22 01:04:15.968281926 +1100
+@@ -29,7 +29,7 @@
+ 
+ #include "../../VERSION.h"
+ 
+-#define STARTUP_TIP_URL "http://update.fwbuilder.org/tips/gettip.cgi?v="VERSION
++#define STARTUP_TIP_URL "http://update.fwbuilder.org/tips/gettip.cgi?v=" VERSION
+ 
+ #endif
+ 

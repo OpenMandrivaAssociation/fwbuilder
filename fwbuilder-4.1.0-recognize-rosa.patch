@@ -6,8 +6,8 @@
  	DISTRO=Debian
 -    elif test -f /etc/mandrake-release ; then
 -	DISTRO=Mandrake
-+    elif test -f /etc/mandriva-release ; then
-+	DISTRO=Mandriva
++    elif test -f /etc/rosa-release ; then
++	DISTRO=ROSA
      elif test -f /etc/slackware-version ; then
  	DISTRO=Slackware
      elif test -f /etc/SuSE-release ; then
@@ -20,7 +20,7 @@
            <path_ipset>/usr/sbin/ipset</path_ipset>
          </RedHat>
 -        <Mandrake>
-+        <Mandriva>
++        <ROSA>
            <path_lsmod>/sbin/lsmod</path_lsmod>
            <path_modprobe>/sbin/modprobe</path_modprobe>
            <path_iptables>/sbin/iptables</path_iptables>
@@ -29,7 +29,7 @@
            <path_ifenslave>/sbin/ifenslave</path_ifenslave>
            <path_ipset>/usr/sbin/ipset</path_ipset>
 -        </Mandrake>
-+        </Mandriva>
++        </ROSA>
          <SuSE>
            <path_lsmod>/sbin/lsmod</path_lsmod>
            <path_modprobe>/sbin/modprobe</path_modprobe>
