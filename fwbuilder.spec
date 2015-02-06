@@ -1,7 +1,7 @@
 Summary:	Firewall Builder
 Name:		fwbuilder
 Version:	5.1.0.3599
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		System/Configuration/Networking
 Url:		http://www.fwbuilder.org/
