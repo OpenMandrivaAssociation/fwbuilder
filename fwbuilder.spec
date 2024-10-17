@@ -4,7 +4,7 @@ Version:	5.1.0.3599
 Release:	7
 License:	GPLv2+
 Group:		System/Configuration/Networking
-Url:		http://www.fwbuilder.org/
+Url:		https://www.fwbuilder.org/
 Source0:	http://downloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
 Patch0:		fwbuilder-4.1.0-recognize-rosa.patch
 Patch1:		ftbfs-gcc-4.7.diff
