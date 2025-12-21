@@ -9,6 +9,11 @@ Source0:	http://downloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
 Patch0:		fwbuilder-4.1.0-recognize-rosa.patch
 Patch1:		ftbfs-gcc-4.7.diff
 Patch2:		fwbuilder-5.1.0.3599-C++11.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	qt4-devel
 BuildRequires:	pkgconfig(libxslt)
 
